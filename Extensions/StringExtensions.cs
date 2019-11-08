@@ -1,5 +1,5 @@
 namespace CSharp.Extensions {
-    public static class String {
+    public static class StringExtensions {
         /// <summary>
         /// Checks string object's value to array of string values
         /// </summary>        
