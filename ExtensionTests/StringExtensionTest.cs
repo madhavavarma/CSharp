@@ -11,7 +11,7 @@ namespace ExtensionTests
         [Fact]
         public void StringExistsInStringArray()
         {
-            var result = StringExtensions.In("Hello", new String[] {"Hi", "Hello", "Hola"});
+            var result = "Hello".In(new String[] {"Hi", "Hello", "Hola"});
 
             Assert.True(result);
         }
