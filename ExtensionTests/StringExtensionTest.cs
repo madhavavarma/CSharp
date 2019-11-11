@@ -15,5 +15,13 @@ namespace ExtensionTests
 
             Assert.True(result);
         }
+
+        [Fact]
+        public void StringNotExistsInStringArray()
+        {
+            var result = "Hello".In(new String[] {"Hi", "Hola"});
+
+            Assert.False(result);
+        }
     }
 }
