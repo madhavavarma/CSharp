@@ -1,8 +1,6 @@
-using System;
-using Xunit;
-
 namespace ExtensionTests
 {
+    using System;
     using CSharp.Extensions;
     using Xunit;
 
