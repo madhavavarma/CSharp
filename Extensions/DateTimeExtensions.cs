@@ -11,7 +11,7 @@ namespace CSharp.Extensions {
         ///<param name="toDate">To Date</param>
         ///<returns>Returns true if date is between fromDate and toDate</returns>
         public static bool Between(this DateTime dateTime, DateTime fromDate, DateTime toDate) {
-            return dateTime.CompareTo(fromDate) >= 0 && dateTime.CompareTo(toDate) <= 0;
+            return dateTime >= fromDate && dateTime <= toDate;
         }
 
     }
