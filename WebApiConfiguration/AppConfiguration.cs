@@ -2,7 +2,8 @@ using Microsoft.Extensions.Configuration;
 
 public class AppConfiguration {
 
-    private const string DefaultGreeting = "Greetings:Default";
+    private const string AppSettings = "AppSettings";
+    private const string Greetings = "Greetings";
 
     private IConfiguration configuration;
 
@@ -10,11 +11,12 @@ public class AppConfiguration {
         this.configuration = configuration;
     }
 
-    public string Greeting {
-        get => this.configuration.GetValue<string>(DefaultGreeting); 
-        private set {}
+    public IConfigurationSection AppSettingsSection {
+        get => this.configuration.GetSection(AppSettings);
     }
 
-    
-
+    public string Greeting {
+        get => AppSettingsSection[Greetings]; 
+        private set {}
+    }
 }
