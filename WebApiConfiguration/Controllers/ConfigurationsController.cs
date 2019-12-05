@@ -7,15 +7,23 @@ namespace CSharp.WebApiConfiguration {
     public class ConfigurationsController : ControllerBase
     {
         AppConfiguration appConfiguration;
+        AppOptionsConfiguration appOptionsConfiguration;
 
-        public ConfigurationsController(AppConfiguration appConfig) {
+        public ConfigurationsController(AppConfiguration appConfig, AppOptionsConfiguration appOptionsConfiguration) {
             this.appConfiguration = appConfig;
+            this.appOptionsConfiguration = appOptionsConfiguration;
         }
 
         [HttpGet]
         public ActionResult<string> Get() {
             Console.WriteLine(appConfiguration.Greeting);
             return appConfiguration.Greeting;
+        }
+
+        [HttpGet("options")]
+        public ActionResult<string> GetOptions() {
+            Console.WriteLine(appOptionsConfiguration.Greeting);
+            return appOptionsConfiguration.Greeting;
         }
     }
 }

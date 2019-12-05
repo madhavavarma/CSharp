@@ -15,9 +15,21 @@ using Microsoft.Extensions.Logging;
 namespace CSharp.WebApiConfiguration {
     public class Startup {
 
+        IConfiguration configuration;
+
+        public Startup(IConfiguration configuration) {
+            this.configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
+
+            services.Configure<AppSettings>(this.configuration.GetSection("AppSettings"));
+
+
             services.AddScoped<AppConfiguration>();
+            services.AddScoped<AppOptionsConfiguration>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
