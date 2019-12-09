@@ -9,7 +9,8 @@
         {
             Console.WriteLine("Hello World!");
 
-            Select.SimpleSelect();
+            Select.Execute();
+            Join.Execute();
         }
     }
 }
