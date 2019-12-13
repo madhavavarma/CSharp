@@ -9,8 +9,8 @@
         {
             Console.WriteLine("Hello World!");
 
-            Select.Execute();
-            Join.Execute();
+            // Select.Execute();
+            GroupJoin.Execute();
         }
     }
 }
