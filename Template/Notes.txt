@@ -38,5 +38,5 @@ Configure
                 ASPNETCORE_ENVIRONMENT
                 
 
-appSettings.json
+appSettings.json, Program.cs, Startup.cs
 =======================================================================================
