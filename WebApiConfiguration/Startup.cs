@@ -24,7 +24,7 @@ namespace CSharp.WebApiConfiguration {
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
 
-            services.Configure<AppSettings>(this.configuration.GetSection("AppSettings"));
+            services.Configure<AppSettings>(this.configuration);
 
 
             services.AddScoped<AppConfiguration>();

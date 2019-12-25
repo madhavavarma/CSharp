@@ -11,8 +11,18 @@ namespace CSharp.WebApiConfiguration {
         }
 
         public string Greeting {
-        get => appSettings.Greetings; 
-        set {}
-    }
+            get => appSettings.Greetings; 
+            set {}
+        }
+
+        public string[] Messages {
+            get => appSettings.Messages;
+            set {}
+        }
+
+        public ModuleSettings ModuleSettings {
+            get => appSettings.ModuleSettings;
+            set {}
+        }
     }
 }

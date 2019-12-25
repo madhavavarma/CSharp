@@ -25,5 +25,17 @@ namespace CSharp.WebApiConfiguration {
             Console.WriteLine(appOptionsConfiguration.Greeting);
             return appOptionsConfiguration.Greeting;
         }
+
+        [HttpGet("messages")]
+        public ActionResult<string[]> GetMessages() {
+            Console.WriteLine(appOptionsConfiguration.Messages);
+            return appOptionsConfiguration.Messages;
+        }
+
+        [HttpGet("ms")]
+        public ActionResult<ModuleSettings> GetModuleSettings() {
+            Console.WriteLine(appOptionsConfiguration.ModuleSettings);
+            return appOptionsConfiguration.ModuleSettings;
+        }
     }
 }
