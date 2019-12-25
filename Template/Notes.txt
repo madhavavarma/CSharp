@@ -1,0 +1,3 @@
+Create csproj file
+Add node "Project" with attribute "Sdk" and value as "Microsoft.NET.Sdk.Web"
+Add "PropertyGroup" with "TargetFramework" as child with value "netcoreapp3.0"
