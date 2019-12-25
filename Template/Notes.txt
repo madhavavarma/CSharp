@@ -21,6 +21,8 @@ Configure
         windowsAuthentication
         anonymousAuthentication
         iisExpress
+            applicationUrl
+            sslPort
 
     
     profiles
@@ -28,3 +30,9 @@ Configure
     Configure
         IIS Express 
         Project (name of the project)
+
+            commandName
+            launchBrowser
+            applicationUrl
+            environmentVariables
+                ASPNETCORE_ENVIRONMENT
