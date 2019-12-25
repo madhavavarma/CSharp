@@ -36,3 +36,7 @@ Configure
             applicationUrl
             environmentVariables
                 ASPNETCORE_ENVIRONMENT
+                
+
+appSettings.json
+=======================================================================================
