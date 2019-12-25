@@ -1,3 +1,30 @@
+CSProj
+==================================================================================
 Create csproj file
 Add node "Project" with attribute "Sdk" and value as "Microsoft.NET.Sdk.Web"
 Add "PropertyGroup" with "TargetFramework" as child with value "netcoreapp3.0"
+
+
+LaunchSettings.json
+=====================================================================================
+Add folder "Properties"
+Add file "launchSettings.json" in "Properties" folder
+
+Configure
+    iisSettings
+    profiles
+
+
+    iisSettings
+    --------------------------------------------------------------------------------
+    Configure:
+        windowsAuthentication
+        anonymousAuthentication
+        iisExpress
+
+    
+    profiles
+    ---------------------------------------------------------------------------------
+    Configure
+        IIS Express 
+        Project (name of the project)
