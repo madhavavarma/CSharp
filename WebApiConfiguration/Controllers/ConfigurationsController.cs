@@ -7,11 +7,11 @@ namespace CSharp.WebApiConfiguration {
     public class ConfigurationsController : ControllerBase
     {
         AppConfiguration appConfiguration;
-        AppOptionsConfiguration appOptionsConfiguration;
+        AppSettings appSettings;
 
         public ConfigurationsController(AppConfiguration appConfig, AppOptionsConfiguration appOptionsConfiguration) {
             this.appConfiguration = appConfig;
-            this.appOptionsConfiguration = appOptionsConfiguration;
+            this.appSettings = appOptionsConfiguration.appSettings;
         }
 
         [HttpGet]
@@ -22,20 +22,17 @@ namespace CSharp.WebApiConfiguration {
 
         [HttpGet("options")]
         public ActionResult<string> GetOptions() {
-            Console.WriteLine(appOptionsConfiguration.Greeting);
-            return appOptionsConfiguration.Greeting;
+            return appSettings.Greetings;
         }
 
         [HttpGet("messages")]
         public ActionResult<string[]> GetMessages() {
-            Console.WriteLine(appOptionsConfiguration.Messages);
-            return appOptionsConfiguration.Messages;
+            return appSettings.Messages;
         }
 
         [HttpGet("ms")]
         public ActionResult<ModuleSettings> GetModuleSettings() {
-            Console.WriteLine(appOptionsConfiguration.ModuleSettings);
-            return appOptionsConfiguration.ModuleSettings;
+            return appSettings.ModuleSettings;
         }
     }
 }
